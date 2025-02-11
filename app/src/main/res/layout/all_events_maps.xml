@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/purple_200"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            app:layout_constraintBottom_toTopOf="@id/maps_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/previous_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="@color/purple_200"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_navigate_before_24"
+            app:layout_constraintBottom_toTopOf="@id/maps_fragment"
+            app:layout_constraintEnd_toStartOf="@+id/next_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/my_location_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="@color/purple_200"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_my_location_24"
+            app:layout_constraintBottom_toTopOf="@id/maps_fragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <fragment
+            android:id="@+id/maps_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/next_btn"
+            tools:context=".MapsActivity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

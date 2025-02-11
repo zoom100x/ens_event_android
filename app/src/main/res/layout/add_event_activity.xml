@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8">
+
+
+
+    <ImageView
+        android:id="@+id/returnBack"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/back_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+            <LinearLayout
+                android:id="@+id/view"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/addImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/add_photo" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event title :"
+                android:textColor="#c4272938"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <EditText
+                android:id="@+id/addTitle"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="textPersonName"
+                android:textSize="30sp"
+                android:letterSpacing="0.15"
+                android:textColor="#272938"
+                android:fontFamily="@font/dm_serif"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :"
+                android:textSize="20sp"
+                android:textColor="#c4272938"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/addTitle"
+                app:layout_constraintTop_toBottomOf="@+id/addTitle" />
+
+            <EditText
+                android:id="@+id/addDate"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input_2"
+                android:drawableRight="@drawable/date_range"
+                android:ems="10"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="12/10/2022"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#272938"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Time :"
+                android:textColor="#c4272938"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/addDate"
+                app:layout_constraintTop_toBottomOf="@+id/addTitle" />
+
+            <EditText
+                android:id="@+id/addTime"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input_2"
+                android:drawableRight="@drawable/time_icon"
+                android:ems="10"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="02:10 AM"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#272938"
+                app:layout_constraintStart_toEndOf="@+id/addDate"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Location :"
+                android:textColor="#c4272938"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/addDate" />
+
+            <EditText
+                android:id="@+id/addLocation"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Amphi2 ENS"
+                android:inputType="textPersonName"
+                android:drawableRight="@drawable/location"
+                android:minHeight="48dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/bg_input_2"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+            <ImageButton
+                android:id="@+id/add_image_location_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                app:layout_constraintBottom_toBottomOf="@+id/addLocation"
+                app:layout_constraintStart_toEndOf="@+id/addLocation"
+                app:layout_constraintTop_toTopOf="@+id/addLocation" />
+
+            <ImageButton
+                android:id="@+id/add_location_info_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_add_location_24"
+                app:layout_constraintBottom_toBottomOf="@+id/addLocation"
+                app:layout_constraintStart_toEndOf="@+id/add_image_location_btn"
+                app:layout_constraintTop_toTopOf="@+id/addLocation" />
+
+            <TextView
+                android:id="@+id/longitude_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Longitude : "
+                android:textColor="#272938"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/addLocation"
+                app:layout_constraintTop_toBottomOf="@+id/addLocation" />
+
+            <TextView
+                android:id="@+id/latitude_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Latitude : "
+                android:textColor="#272938"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/addLocation"
+                app:layout_constraintTop_toBottomOf="@+id/longitude_text_view" />
+
+            <ImageView
+                android:id="@+id/image_location"
+                android:layout_width="304dp"
+                android:layout_height="297dp"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:alpha="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_photo_24"
+                app:layout_constraintStart_toStartOf="@+id/addLocation"
+                app:layout_constraintTop_toBottomOf="@+id/latitude_text_view" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Additional information :"
+                android:textColor="#c4272938"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/image_location" />
+
+
+
+            <EditText
+                android:id="@+id/addDescription"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#272938"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:hint="Description of your event ...\n( 200 characters limit )"
+                android:lineHeight="16dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="200"
+                android:textSize="15sp"
+                android:background="@drawable/bg_input_3"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <ProgressBar
+                android:id="@+id/uploadProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/createEventBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDescription" />
+
+            <Button
+                android:id="@+id/createEventBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="Create Event"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.18"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:backgroundTint="#f15450"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDescription" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/processIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#90000000"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/uploadProgress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creating your event is in process...\nPlease wait a moment"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/about_creating_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <android.widget.Space
+                android:id="@+id/space_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createEventBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    </LinearLayout>
+</LinearLayout>
