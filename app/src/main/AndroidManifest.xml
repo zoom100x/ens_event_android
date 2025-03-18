@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.oussamalloud.ensevents">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 <!-- sk.eyJ1Ijoiem9vbTEwMHgiLCJhIjoiY2t6Y25idmZhMDBsbDJxbjFiMWFnYjlvbSJ9.LI4vPmOHRCqx9jco-P_kug -->
     <uses-feature
         android:name="android.hardware.camera"
@@ -15,6 +14,7 @@
         android:maxSdkVersion="18" />
 
     <application
+        android:name=".EnsEventApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"

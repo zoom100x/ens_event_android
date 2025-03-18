@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "835822940757-db4g2cloc7j9qpr4i9cg0vs05au3d72h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.oussamalloud.ensevents",
+            "certificate_hash": "0ef7a51062207d3aa1f18dab0c86d2f61fb4f89e"
+          }
+        },
+        {
           "client_id": "835822940757-qri4kogb1l3t5nuqs9k7hhqqj9sfkfjn.apps.googleusercontent.com",
           "client_type": 3
         }
